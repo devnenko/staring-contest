@@ -639,7 +639,7 @@ let event, blinkRate;
 let video;
 let model;
 let detector;
-const VIDEO_SIZE = 50;
+const VIDEO_SIZE = 150;
 let blinkCount = 0;
 let tempBlinkRate = 0;
 let rendering = true;
@@ -719,7 +719,7 @@ function isVoluntaryBlink(blinkDetected) {
     // NOTE: adding this to distinguish intentional blinks
     if (blinkDetected) {
         blinkCount++;
-        if (blinkCount > 3) {
+        if (blinkCount > 2) {
             blinkCount = 0;
             return true;
         }
