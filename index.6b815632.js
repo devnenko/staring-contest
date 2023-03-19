@@ -719,7 +719,7 @@ function isVoluntaryBlink(blinkDetected) {
     // NOTE: adding this to distinguish intentional blinks
     if (blinkDetected) {
         blinkCount++;
-        if (blinkCount > 2) {
+        if (blinkCount > 3) {
             blinkCount = 0;
             return true;
         }
@@ -738,7 +738,7 @@ async function renderPrediction() {
                 console.log(rightEar);
                 const rightEAR = 0;
                 const leftEAR = 0;
-                let blinked = rightEar <= 5 && leftEar <= 5;
+                let blinked = rightEar <= 6 && leftEar <= 6;
                 if (blinked) updateBlinkRate();
                 event = {
                     left: leftEAR <= EAR_THRESHOLD,
