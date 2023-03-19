@@ -738,7 +738,7 @@ async function renderPrediction() {
                 console.log(rightEar);
                 const rightEAR = 0;
                 const leftEAR = 0;
-                let blinked = rightEar <= 3 && leftEar <= 3;
+                let blinked = rightEar <= 4 && leftEar <= 4;
                 if (blinked) updateBlinkRate();
                 event = {
                     left: leftEAR <= EAR_THRESHOLD,
